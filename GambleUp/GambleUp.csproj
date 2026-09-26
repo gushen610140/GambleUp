@@ -1,0 +1,542 @@
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>netstandard2.1</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>disable</Nullable>
+		<RootNamespace>GambleUp</RootNamespace>
+		<LangVersion>default</LangVersion>
+		<IsPackable>false</IsPackable>
+		<AssemblyVersion>1.1.0.0</AssemblyVersion>
+		<FileVersion>1.1.0.0</FileVersion>
+		<NeutralLanguage>en-US</NeutralLanguage>
+		<AssemblyName>GambleUp</AssemblyName>
+		<PlatformTarget>x64</PlatformTarget>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Reference Include="AllIn1SpriteShaderAssembly">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\AllIn1SpriteShaderAssembly.dll</HintPath>
+		</Reference>
+		<Reference Include="Assembly-CSharp-firstpass">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\Assembly-CSharp-firstpass.dll</HintPath>
+		</Reference>
+		<Reference Include="Assembly-CSharp">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\Assembly-CSharp.dll</HintPath>
+		</Reference>
+		<Reference Include="com.rlabrecque.steamworks.net">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\com.rlabrecque.steamworks.net.dll</HintPath>
+		</Reference>
+		<Reference Include="Discord.Sdk">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\Discord.Sdk.dll</HintPath>
+		</Reference>
+		<Reference Include="DissonanceFMOD_Playback">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\DissonanceFMOD_Playback.dll</HintPath>
+		</Reference>
+		<Reference Include="DissonanceFMOD_Recording">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\DissonanceFMOD_Recording.dll</HintPath>
+		</Reference>
+		<Reference Include="DissonanceVoip">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\DissonanceVoip.dll</HintPath>
+		</Reference>
+		<Reference Include="DOTween">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\DOTween.dll</HintPath>
+		</Reference>
+		<Reference Include="Febucci.TextAnimator.Demo.Runtime">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\Febucci.TextAnimator.Demo.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="Febucci.TextAnimator.Runtime">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\Febucci.TextAnimator.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="FizzySteamworks">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\FizzySteamworks.dll</HintPath>
+		</Reference>
+		<Reference Include="FMODUnity">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\FMODUnity.dll</HintPath>
+		</Reference>
+		<Reference Include="FMODUnityResonance">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\FMODUnityResonance.dll</HintPath>
+		</Reference>
+		<Reference Include="Gilzoide.UpdateManager">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\Gilzoide.UpdateManager.dll</HintPath>
+		</Reference>
+		<Reference Include="kcp2k">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\kcp2k.dll</HintPath>
+		</Reference>
+		<Reference Include="Lofelt.NiceVibrations">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\Lofelt.NiceVibrations.dll</HintPath>
+		</Reference>
+		<Reference Include="Masking.Runtime">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\Masking.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="Mirage.Profiler">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\Mirage.Profiler.dll</HintPath>
+		</Reference>
+		<Reference Include="Mirror.Authenticators">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\Mirror.Authenticators.dll</HintPath>
+		</Reference>
+		<Reference Include="Mirror.BouncyCastle.Cryptography">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\Mirror.BouncyCastle.Cryptography.dll</HintPath>
+		</Reference>
+		<Reference Include="Mirror.Components">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\Mirror.Components.dll</HintPath>
+		</Reference>
+		<Reference Include="Mirror">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\Mirror.dll</HintPath>
+		</Reference>
+		<Reference Include="Mirror.Transports">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\Mirror.Transports.dll</HintPath>
+		</Reference>
+		<Reference Include="MoreMountains.Tools">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\MoreMountains.Tools.dll</HintPath>
+		</Reference>
+		<Reference Include="Newtonsoft.Json">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\Newtonsoft.Json.dll</HintPath>
+		</Reference>
+		<Reference Include="ShapesRuntime">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\ShapesRuntime.dll</HintPath>
+		</Reference>
+		<Reference Include="ShapesSamples">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\ShapesSamples.dll</HintPath>
+		</Reference>
+		<Reference Include="SimpleWebTransport">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\SimpleWebTransport.dll</HintPath>
+		</Reference>
+		<Reference Include="Sirenix.OdinInspector.Attributes">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\Sirenix.OdinInspector.Attributes.dll</HintPath>
+		</Reference>
+		<Reference Include="Sirenix.OdinInspector.Modules.Unity.Addressables">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\Sirenix.OdinInspector.Modules.Unity.Addressables.dll</HintPath>
+		</Reference>
+		<Reference Include="Sirenix.OdinInspector.Modules.UnityLocalization">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\Sirenix.OdinInspector.Modules.UnityLocalization.dll</HintPath>
+		</Reference>
+		<Reference Include="Sirenix.Serialization.Config">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\Sirenix.Serialization.Config.dll</HintPath>
+		</Reference>
+		<Reference Include="Sirenix.Serialization">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\Sirenix.Serialization.dll</HintPath>
+		</Reference>
+		<Reference Include="Sirenix.Utilities">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\Sirenix.Utilities.dll</HintPath>
+		</Reference>
+		<Reference Include="SkyBraveToolkitScripts">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\SkyBraveToolkitScripts.dll</HintPath>
+		</Reference>
+		<Reference Include="StompyRobot.SRDebugger">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\StompyRobot.SRDebugger.dll</HintPath>
+		</Reference>
+		<Reference Include="StompyRobot.SRF">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\StompyRobot.SRF.dll</HintPath>
+		</Reference>
+		<Reference Include="Telepathy">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\Telepathy.dll</HintPath>
+		</Reference>
+		<Reference Include="UModelerCommon">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\UModelerCommon.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Addressables">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\Unity.Addressables.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.AI.Navigation">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\Unity.AI.Navigation.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Burst">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\Unity.Burst.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Burst.Unsafe">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\Unity.Burst.Unsafe.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Cinemachine">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\Unity.Cinemachine.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Collections">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\Unity.Collections.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Collections.LowLevel.ILSupport">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\Unity.Collections.LowLevel.ILSupport.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.InputSystem">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\Unity.InputSystem.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.InputSystem.ForUI">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\Unity.InputSystem.ForUI.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.InternalAPIEngineBridge.004">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\Unity.InternalAPIEngineBridge.004.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.InternalAPIEngineBridge.013">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\Unity.InternalAPIEngineBridge.013.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Localization">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\Unity.Localization.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Mathematics">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\Unity.Mathematics.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Multiplayer.Center.Common">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\Unity.Multiplayer.Center.Common.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Profiling.Core">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\Unity.Profiling.Core.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.RenderPipelines.Core.Runtime">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.RenderPipelines.Core.Runtime.Shared">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\Unity.RenderPipelines.Core.Runtime.Shared.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.RenderPipelines.GPUDriven.Runtime">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\Unity.RenderPipelines.GPUDriven.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.RenderPipelines.Universal.2D.Runtime">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\Unity.RenderPipelines.Universal.2D.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.RenderPipelines.Universal.Config.Runtime">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\Unity.RenderPipelines.Universal.Config.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.RenderPipelines.Universal.Runtime">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.RenderPipelines.Universal.Shaders">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.ResourceManager">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\Unity.ResourceManager.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.ScriptableBuildPipeline">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\Unity.ScriptableBuildPipeline.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Splines">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\Unity.Splines.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.TextMeshPro">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\Unity.TextMeshPro.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Timeline">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\Unity.Timeline.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.UnifiedRayTracing.Runtime">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\Unity.UnifiedRayTracing.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.VisualEffectGraph.Runtime">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\Unity.VisualEffectGraph.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.AccessibilityModule">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\UnityEngine.AccessibilityModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.AdaptivePerformanceModule">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\UnityEngine.AdaptivePerformanceModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.AIModule">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\UnityEngine.AIModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.AMDModule">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\UnityEngine.AMDModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.AndroidJNIModule">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\UnityEngine.AndroidJNIModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.AnimationModule">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\UnityEngine.AnimationModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.ARModule">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\UnityEngine.ARModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.AssetBundleModule">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\UnityEngine.AssetBundleModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.AudioModule">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\UnityEngine.AudioModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.ClothModule">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\UnityEngine.ClothModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.ClusterInputModule">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\UnityEngine.ClusterInputModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.ClusterRendererModule">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\UnityEngine.ClusterRendererModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.ContentLoadModule">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\UnityEngine.ContentLoadModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.CoreModule">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.CrashReportingModule">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\UnityEngine.CrashReportingModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.DirectorModule">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\UnityEngine.DirectorModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\UnityEngine.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.DSPGraphModule">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\UnityEngine.DSPGraphModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.GameCenterModule">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\UnityEngine.GameCenterModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.GIModule">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\UnityEngine.GIModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.GraphicsStateCollectionSerializerModule">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\UnityEngine.GraphicsStateCollectionSerializerModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.GridModule">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\UnityEngine.GridModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.HierarchyCoreModule">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\UnityEngine.HierarchyCoreModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.HierarchyModule">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\UnityEngine.HierarchyModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.HotReloadModule">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\UnityEngine.HotReloadModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.IdentifiersModule">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\UnityEngine.IdentifiersModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.ImageConversionModule">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\UnityEngine.ImageConversionModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.IMGUIModule">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\UnityEngine.IMGUIModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.InputForUIModule">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\UnityEngine.InputForUIModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.InputLegacyModule">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\UnityEngine.InputLegacyModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.InputModule">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\UnityEngine.InputModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.InsightsModule">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\UnityEngine.InsightsModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.JSONSerializeModule">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\UnityEngine.JSONSerializeModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.LocalizationModule">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\UnityEngine.LocalizationModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.MarshallingModule">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\UnityEngine.MarshallingModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.MultiplayerModule">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\UnityEngine.MultiplayerModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.NVIDIAModule">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\UnityEngine.NVIDIAModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.ParticleSystemModule">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\UnityEngine.ParticleSystemModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.PerformanceReportingModule">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\UnityEngine.PerformanceReportingModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.Physics2DModule">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\UnityEngine.Physics2DModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.PhysicsBackendPhysXModule">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\UnityEngine.PhysicsBackendPhysXModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.PhysicsModule">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\UnityEngine.PhysicsModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.PropertiesModule">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\UnityEngine.PropertiesModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.RenderAs2DModule">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\UnityEngine.RenderAs2DModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.ScreenCaptureModule">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\UnityEngine.ScreenCaptureModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.ShaderRuntimeModule">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\UnityEngine.ShaderRuntimeModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.ShaderVariantAnalyticsModule">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\UnityEngine.ShaderVariantAnalyticsModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.SharedInternalsModule">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\UnityEngine.SharedInternalsModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.SpriteMaskModule">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\UnityEngine.SpriteMaskModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.SpriteShapeModule">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\UnityEngine.SpriteShapeModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.StreamingModule">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\UnityEngine.StreamingModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.SubstanceModule">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\UnityEngine.SubstanceModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.SubsystemsModule">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\UnityEngine.SubsystemsModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.TerrainModule">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\UnityEngine.TerrainModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.TerrainPhysicsModule">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\UnityEngine.TerrainPhysicsModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.TextCoreFontEngineModule">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\UnityEngine.TextCoreFontEngineModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.TextCoreTextEngineModule">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\UnityEngine.TextCoreTextEngineModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.TextRenderingModule">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\UnityEngine.TextRenderingModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.TilemapModule">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\UnityEngine.TilemapModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.TLSModule">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\UnityEngine.TLSModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UI">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\UnityEngine.UI.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UIElementsModule">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\UnityEngine.UIElementsModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UIModule">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\UnityEngine.UIModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UmbraModule">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\UnityEngine.UmbraModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityAnalyticsCommonModule">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\UnityEngine.UnityAnalyticsCommonModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityAnalyticsModule">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\UnityEngine.UnityAnalyticsModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityConnectModule">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\UnityEngine.UnityConnectModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityConsentModule">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\UnityEngine.UnityConsentModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityCurlModule">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\UnityEngine.UnityCurlModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityWebRequestAssetBundleModule">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\UnityEngine.UnityWebRequestAssetBundleModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityWebRequestAudioModule">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityWebRequestModule">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\UnityEngine.UnityWebRequestModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityWebRequestTextureModule">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityWebRequestWWWModule">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.VectorGraphicsModule">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\UnityEngine.VectorGraphicsModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.VehiclesModule">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\UnityEngine.VehiclesModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.VFXModule">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\UnityEngine.VFXModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.VideoModule">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\UnityEngine.VideoModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.VirtualTexturingModule">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\UnityEngine.VirtualTexturingModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.VRModule">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\UnityEngine.VRModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.WindModule">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\UnityEngine.WindModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.XRModule">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\UnityEngine.XRModule.dll</HintPath>
+		</Reference>
+		<Reference Include="VInspector">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\VInspector.dll</HintPath>
+		</Reference>
+		<Reference Include="websocket-sharp">
+			<HintPath>$(GamePath)/Gamble With Your Friends_Data\Managed\websocket-sharp.dll</HintPath>
+		</Reference>
+		<Reference Include="MelonLoader">
+			<HintPath>$(GamePath)/MelonLoader\net35\MelonLoader.dll</HintPath>
+		</Reference>
+		<Reference Include="0Harmony">
+			<HintPath>$(GamePath)/MelonLoader\net35\0Harmony.dll</HintPath>
+		</Reference>
+
+	</ItemGroup>
+
+	<PropertyGroup>
+		<AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+		<EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Compile Include="Core.cs" />
+		<Compile Include="Probe.cs" />
+		<Compile Include="Cheat.cs" />
+		<Content Include="Directory.Build.props" />
+	</ItemGroup>
+	
+	<PropertyGroup>
+		<GambleUpGameExe>$(GamePath)\Gamble With Your Friends.exe</GambleUpGameExe>
+		<GambleUpModsDir>$(GamePath)\Mods</GambleUpModsDir>
+	</PropertyGroup>
+
+	<!-- Fail fast with one readable message instead of ~30 missing-namespace errors. -->
+	<Target Name="GambleUpCheckGamePath" BeforeTargets="BeforeCompile;ResolveAssemblyReferences">
+		<Error Condition="!Exists('$(GambleUpGameExe)')"
+			   Text="GambleUp: the game was not found at '$(GambleUpGameExe)'. Every assembly reference points into the game folder, so the build cannot continue. Fix it with either: dotnet build -c Release -p:GamePath=&quot;&lt;path to the folder containing 'Gamble With Your Friends.exe'&quot;  OR  set the GAMBLEUP_GAME_PATH environment variable for this machine." />
+	</Target>
+
+	<!--
+		Deploy the freshly built DLL into the game's Mods folder.
+		Set -p:DeployMod=false to build without installing.
+	-->
+	<PropertyGroup>
+		<DeployMod Condition="'$(DeployMod)' == ''">true</DeployMod>
+	</PropertyGroup>
+
+	<Target Name="GambleUpDeploy" AfterTargets="Build">
+		<Warning Condition="'$(DeployMod)' != 'true'"
+				 Text="GambleUp: DeployMod=false, skipping copy to '$(GambleUpModsDir)'." />
+		<Error Condition="'$(DeployMod)' == 'true' AND !Exists('$(GambleUpGameExe)')"
+			   Text="GambleUp: game not found at '$(GambleUpGameExe)'. Build with -p:GamePath=&quot;&lt;path to the game folder&gt;&quot; or set the GAMBLEUP_GAME_PATH environment variable. The build itself succeeded; install by copying $(TargetFileName) into that game's Mods folder." />
+		<MakeDir Condition="'$(DeployMod)' == 'true' AND Exists('$(GambleUpGameExe)')"
+				 Directories="$(GambleUpModsDir)" />
+		<Copy Condition="'$(DeployMod)' == 'true' AND Exists('$(GambleUpGameExe)')"
+			  SourceFiles="$(TargetPath)"
+			  DestinationFiles="$(GambleUpModsDir)\$(TargetFileName)"
+			  SkipUnchangedFiles="true" />
+		<Message Condition="'$(DeployMod)' == 'true' AND Exists('$(GambleUpGameExe)')"
+				 Text="GambleUp: installed $(TargetFileName) to $(GambleUpModsDir)" Importance="high" />
+	</Target>
+</Project>

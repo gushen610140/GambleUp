@@ -1,0 +1,15 @@
+<Project>
+  <PropertyGroup>
+    <!--
+      Absolute path to the "Gamble With Your Friends" game folder (the one containing
+      "Gamble With Your Friends_Data" and "Gamble With Your Friends.exe").
+
+      Resolution order:
+        1. -p:GamePath="..." on the dotnet build command line
+        2. the GAMBLEUP_GAME_PATH environment variable
+        3. the default Steam library location below
+    -->
+    <GamePath Condition="'$(GamePath)' == '' AND '$(GAMBLEUP_GAME_PATH)' != ''">$(GAMBLEUP_GAME_PATH)</GamePath>
+    <GamePath Condition="'$(GamePath)' == ''">C:\Program Files (x86)\Steam\steamapps\common\Gamble With Your Friends</GamePath>
+  </PropertyGroup>
+</Project>

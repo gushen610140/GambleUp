@@ -1,0 +1,24 @@
+# Build output
+bin/
+obj/
+
+# Decompiled game reference sources.
+# These are extracted from the retail Assembly-CSharp.dll / Mirror.dll and are
+# NOT part of this project. They are excluded on purpose: they are the
+# property of the game's developers and must not be redistributed.
+_reference/
+
+# Release archives produced by packaging
+*.zip
+
+# Local MelonLoader config created next to the game
+GambleUp_cheat.txt
+
+# Editor / OS noise
+.vs/
+.idea/
+*.user
+*.suo
+Thumbs.db
+desktop.ini
+.DS_Store
